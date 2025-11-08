@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Animación para el emoji del dedo */
+@keyframes wave-left {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+.animate-wave-left {
+  animation: wave-left 1.5s ease-in-out infinite;
+}
