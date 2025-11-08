@@ -10,6 +10,7 @@ INPUT_DIR = "./api_outputs"
 OUTPUT_DIR = "./jsons"
 
 FILENAME_PATTERN = re.compile(r"^(?P<doc_id>[a-f0-9-]+)_page(?P<page>\d+)_\.json$", re.IGNORECASE)
+DATE_PATTERN = re.compile(r"^(?P<dia>\d{1,2})/(?P<mes>\d{1,2})/(?P<anio>\d{4})$")
 
 
 def agrupar_paginas_por_documento(input_dir: Path) -> dict[str, dict[str, dict[str, Any]]]:
@@ -18,7 +19,9 @@ def agrupar_paginas_por_documento(input_dir: Path) -> dict[str, dict[str, dict[s
     for json_path in sorted(input_dir.glob("*.json")):
         match = FILENAME_PATTERN.match(json_path.name)
         if not match:
-            print(f"⚠️  Nombre de archivo no coincide con el patrón esperado y se omitirá: {json_path.name}")
+            print(
+                f"[ADVERTENCIA] Nombre de archivo no coincide con el patrón esperado y se omitirá: {json_path.name}"
+            )
             continue
 
         doc_id = match.group("doc_id")
@@ -28,15 +31,28 @@ def agrupar_paginas_por_documento(input_dir: Path) -> dict[str, dict[str, dict[s
             with json_path.open(encoding="utf-8") as file:
                 data = json.load(file)
         except json.JSONDecodeError as exc:
-            print(f"⚠️  No se pudo leer '{json_path.name}': {exc}")
+            print(f"[ADVERTENCIA] No se pudo leer '{json_path.name}': {exc}")
             continue
 
         output = data.get("output")
         if not isinstance(output, dict):
-            print(f"⚠️  El archivo '{json_path.name}' no contiene un objeto 'output' válido.")
+            print(
+                f"[ADVERTENCIA] El archivo '{json_path.name}' no contiene un objeto 'output' válido."
+            )
             continue
 
-        documentos[doc_id][page_id] = output
+        output_normalizado = dict(output)
+        fecha = output_normalizado.get("fecha")
+        if isinstance(fecha, str):
+            fecha = fecha.strip()
+            match_fecha = DATE_PATTERN.match(fecha)
+            if match_fecha:
+                dia = int(match_fecha.group("dia"))
+                mes = int(match_fecha.group("mes"))
+                anio = match_fecha.group("anio")
+                output_normalizado["fecha"] = f"{dia:02d}/{mes:02d}/{anio}"
+
+        documentos[doc_id][page_id] = output_normalizado
 
     return documentos
 
@@ -74,7 +90,9 @@ def main() -> None:
 
     total_docs = len(documentos)
     total_paginas = sum(len(pages) for pages in documentos.values())
-    print(f"✓ Normalización completada: {total_docs} documentos y {total_paginas} páginas procesadas.")
+    print(
+        f"[OK] Normalización completada: {total_docs} documentos y {total_paginas} páginas procesadas."
+    )
 
 
 if __name__ == "__main__":
