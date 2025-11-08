@@ -237,6 +237,15 @@ def escribir_errores(errores: list[dict[str, Any]], errores_path: Path) -> None:
         escritor.writerows(errores)
 
 
+def ordenar_registros_por_fecha_desc(registros: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    registros_con_fecha = [r for r in registros if r.get("fecha_hora")]
+    registros_sin_fecha = [r for r in registros if not r.get("fecha_hora")]
+
+    registros_con_fecha.sort(key=lambda r: r["fecha_hora"], reverse=True)
+
+    return registros_con_fecha + registros_sin_fecha
+
+
 def main() -> None:
     base_dir = Path(__file__).resolve().parent
     jsons_dir = (base_dir / JSONS_DIR).resolve()
@@ -252,6 +261,7 @@ def main() -> None:
         print("No se generaron registros a partir de los JSONs disponibles.")
         return
 
+    registros = ordenar_registros_por_fecha_desc(registros)
     escribir_registros(registros, output_path)
     escribir_errores(errores, errores_path)
 
