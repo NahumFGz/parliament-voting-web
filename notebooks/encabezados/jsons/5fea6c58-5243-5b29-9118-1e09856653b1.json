@@ -1,0 +1,38 @@
+{
+  "003": {
+    "tipo": "VOTACION",
+    "fecha": "11/05/2011",
+    "hora": "06:20 PM",
+    "asunto": "PROY. DE LEY 4674, MODIFICACIÓN DE LA LEY 29626, LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2011- ARTÍCULO ÚNICO"
+  },
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "11/05/2011",
+    "hora": "06:25 PM",
+    "asunto": "PROY. DE LEY 4674 DISPOSICIONE COMPLEMENTARIA FINAL PRIMERA"
+  },
+  "005": {
+    "tipo": "VOTACIÓN",
+    "fecha": "11/05/2011",
+    "hora": "06:29 PM",
+    "asunto": "PROY. DE LEY 4674 DISPOSICION COMPLEMENTARIA FINAL SEGUNDA"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "11/05/2011",
+    "hora": "06:34 PM",
+    "asunto": "PROY. DE LEY 4674 DISPOSICION COMPLEMENTARIA FINAL CUARTA"
+  },
+  "008": {
+    "tipo": "VOTACIÓN",
+    "fecha": "11/05/2011",
+    "hora": "08:39 PM",
+    "asunto": "PROY. LEY 4588, LEY DE LA CARRERA ESPECIAL PÚBLICA PENITENCIARIA"
+  },
+  "009": {
+    "tipo": "VOTACION",
+    "fecha": "11/05/2011",
+    "hora": "08:42 PM",
+    "asunto": "EXONERACIÓN DE 2DA VOTACIÓN DEL PROY. LEY 4588, LEY DE LA CARRERA ESPECIAL PÚBLICA PENITENCIARIA"
+  }
+}

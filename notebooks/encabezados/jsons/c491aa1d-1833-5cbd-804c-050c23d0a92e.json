@@ -1,0 +1,56 @@
+{
+  "003": {
+    "tipo": "VOTACIÓN",
+    "fecha": "21/05/2014",
+    "hora": "10:34 AM",
+    "asunto": "ELECCIÓN DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL: BLUME FORTINI, ERNESTO JORGE"
+  },
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "21/05/2014",
+    "hora": "10:37 AM",
+    "asunto": "ELECCIÓN DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL CALDERÓN NAVARRO, NELEY"
+  },
+  "005": {
+    "tipo": "VOTACIÓN",
+    "fecha": "21/05/2014",
+    "hora": "10:42 AM",
+    "asunto": "ELECCIÓN DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL: CAMPOS TORRES, JOSEPH GABRIEL"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "21/05/2014",
+    "hora": "10:46 AM",
+    "asunto": "ELECCIÓN DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL: ESPINOZA-SALDAÑA BARRERA, ELOY ANDRÉS"
+  },
+  "007": {
+    "tipo": "VOTACIÓN",
+    "fecha": "21/05/2014",
+    "hora": "10:51 AM",
+    "asunto": "ELECCIÓN DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL: HAKANSSON NIETO, CARLOS GUILLERMO"
+  },
+  "008": {
+    "tipo": "VOTACIÓN",
+    "fecha": "21/05/2014",
+    "hora": "10:54 AM",
+    "asunto": "ELECCIÓN DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL; PEDESMA NARVÁEZ, MARIANELLA LEONOR"
+  },
+  "009": {
+    "tipo": "VOTACIÓN",
+    "fecha": "21/05/2014",
+    "hora": "10:57 AM",
+    "asunto": "ELECCIÓN DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL: MIRANDA CANALES, MANUEL JESÚS"
+  },
+  "010": {
+    "tipo": "VOTACIÓN",
+    "fecha": "21/05/2014",
+    "hora": "11:01 AM",
+    "asunto": "ELECCIÓN DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL: RAMOS NUÑEZ, CARLOS AUGUSTO"
+  },
+  "011": {
+    "tipo": "VOTACION",
+    "fecha": "21/05/2014",
+    "hora": "11:06 AM",
+    "asunto": "ELECCION DEL MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL"
+  }
+}

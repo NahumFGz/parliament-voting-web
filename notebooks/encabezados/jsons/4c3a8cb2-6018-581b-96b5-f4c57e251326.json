@@ -1,0 +1,20 @@
+{
+  "003": {
+    "tipo": "VOTACION",
+    "fecha": "30/11/2012",
+    "hora": "02:02 AM",
+    "asunto": "PROY. 1466; LEY DE ENDEUDAMIENTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2013"
+  },
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/11/2012",
+    "hora": "02:06 AM",
+    "asunto": "PROY. 1467; LEY DE EQUILIBRIO FINANCIERO DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2013"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/11/2012",
+    "hora": "03:21 AM",
+    "asunto": "CUESTIÓN PREVIA PARA POSTERGAR EL DEBATE DEL PROY. 1465; LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2013"
+  }
+}

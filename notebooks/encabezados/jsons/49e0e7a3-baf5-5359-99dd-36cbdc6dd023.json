@@ -1,0 +1,20 @@
+{
+  "003": {
+    "tipo": "VOTACIÓN",
+    "fecha": "29/11/2014",
+    "hora": "05:30 AM",
+    "asunto": "PROY. 3761; LEY DE ENDEUDAMIENTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2015"
+  },
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "29/11/2014",
+    "hora": "05:36 AM",
+    "asunto": "PROY. 3762; LEY DE EQUILIBRIO FINANCIERO DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2015"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "29/11/2014",
+    "hora": "06:12 AM",
+    "asunto": "PROY. 3760; LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2015"
+  }
+}

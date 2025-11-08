@@ -1,0 +1,20 @@
+{
+  "003": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/11/2017",
+    "hora": "06:33 PM",
+    "asunto": "PROY. 1837; LEY DE ENDEUDAMIENTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2018"
+  },
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/11/2017",
+    "hora": "06:35 PM",
+    "asunto": "PROY. 1838; LEY DE EQUILIBRIO FINANCIERO DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2018"
+  },
+  "005": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/11/2017",
+    "hora": "06:38 PM",
+    "asunto": "PROY. 1836; LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2018"
+  }
+}

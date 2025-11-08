@@ -1,0 +1,26 @@
+{
+  "003": {
+    "tipo": "VOTACIÓN",
+    "fecha": "02/07/2013",
+    "hora": "04:23 PM",
+    "asunto": "CUESTIÓN PREVIA PARA QUE RETORNE A LA COMISIÓN DE PRESUPUESTO EL PROY. 1846; LEY DEL SERVICIO CIVIL"
+  },
+  "005": {
+    "tipo": "VOTACIÓN",
+    "fecha": "02/07/2013",
+    "hora": "04:32 PM",
+    "asunto": "CUESTIÓN PREVIA PARA QUE PASE A LA COMISIÓN DE DESCENTRALIZACIÓN EL PROY. 1846; LEY DEL SERVICIO CIVIL"
+  },
+  "007": {
+    "tipo": "VOTACIÓN",
+    "fecha": "02/07/2013",
+    "hora": "04:38 PM",
+    "asunto": "PROY. 1846; LEY DEL SERVICIO CIVIL (DICTAMEN DE LA COMISIÓN DE PRESUPUESTO)"
+  },
+  "008": {
+    "tipo": "VOTACIÓN",
+    "fecha": "02/07/2013",
+    "hora": "04:41 PM",
+    "asunto": "EXONERACIÓN DE LA SEGUNDA VOTACIÓN DEL PROY. 1846; LEY DEL SERVICIO CIVIL"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "24/11/2011",
+    "hora": "11:25 PM",
+    "asunto": "PROY 115: LEY DE ENDEUDAMIENTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2012"
+  },
+  "005": {
+    "tipo": "VOTACIÓN",
+    "fecha": "24/11/2011",
+    "hora": "11:28 PM",
+    "asunto": "PROY 116; LEY DE EQUILIBRIO FINANCIERO DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2012"
+  },
+  "007": {
+    "tipo": "VOTACION",
+    "fecha": "24/11/2011",
+    "hora": "00:00 AM",
+    "asunto": "PROY 114; LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2012"
+  }
+}

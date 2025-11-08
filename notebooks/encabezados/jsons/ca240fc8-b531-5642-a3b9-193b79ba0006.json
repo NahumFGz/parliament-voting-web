@@ -1,0 +1,26 @@
+{
+  "003": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2016",
+    "hora": "11:16 PM",
+    "asunto": "PROY. 171; LEY DE ENDEUDAMIENTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2017"
+  },
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2016",
+    "hora": "11:18 PM",
+    "asunto": "PROY. 172; LEY DE EQUILIBRIO FINANCIERO DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2017"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2016",
+    "hora": "11:40 PM",
+    "asunto": "CUESTIÓN PREVIA PARA VOTAR POR SEPARADO LOS ARTÍCULOS 6 Y 9 DEL PROY. 173; LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2017"
+  },
+  "008": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2016",
+    "hora": "11:45 PM",
+    "asunto": "PROY. 173; LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2017"
+  }
+}

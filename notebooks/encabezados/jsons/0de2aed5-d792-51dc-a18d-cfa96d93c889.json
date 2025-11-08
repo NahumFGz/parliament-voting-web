@@ -1,0 +1,32 @@
+{
+  "002": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2015",
+    "hora": "02:49 AM",
+    "asunto": "PROY. 4765; LEY DE ENDEUDAMIENTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2016"
+  },
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2015",
+    "hora": "02:56 AM",
+    "asunto": "PROY. 4766; LEY DE EQUILIBRIO FINANCIERO DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2016"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2015",
+    "hora": "03:46 AM",
+    "asunto": "CUESTIÓN PREVIA PARA VOTAR POR SEPARDO EL ART. 6 DEL PROY. 4764; LEY DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL 2016"
+  },
+  "007": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2015",
+    "hora": "03:52 AM",
+    "asunto": "PROY. 4764; LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2016"
+  },
+  "008": {
+    "tipo": "VOTACIÓN",
+    "fecha": "28/11/2015",
+    "hora": "03:57 AM",
+    "asunto": "PROY. 4764; (SEXTA DISPOSICIÓN COMPLEMENTARIA MODIFICATORIA) LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL 2016"
+  }
+}

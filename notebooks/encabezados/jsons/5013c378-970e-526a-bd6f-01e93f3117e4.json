@@ -1,0 +1,38 @@
+{
+  "003": {
+    "tipo": "VOTACIÓN",
+    "fecha": "09/06/2011",
+    "hora": "12:22 PM",
+    "asunto": "CUESTIÓN PREVIA PARA QUE RETORNE A LA COMISIÓN LOS PROYS PROYS 347, 1932 Y 4179, LEY DEL TRABAJO PORTUARIO DE ESTIBA"
+  },
+  "004": {
+    "tipo": "VOTACION",
+    "fecha": "09/06/2011",
+    "hora": "12:25 PM",
+    "asunto": "PROYS 347, 1932 Y 4179, LEY DEL TRABAJO PORTUARIO DE ESTIBA"
+  },
+  "005": {
+    "tipo": "VOTACION",
+    "fecha": "09/06/2011",
+    "hora": "12:29 PM",
+    "asunto": "EXONERACIÓN DE 2DA VOTACIÓN DE LOS PROYS 347, 1932 Y 4179, LEY DEL TRABAJO PORTUARIO DE ESTIBA"
+  },
+  "007": {
+    "tipo": "VOTACIÓN",
+    "fecha": "09/06/2011",
+    "hora": "01:21 PM",
+    "asunto": "ELECCION DEL SEÑOR WALTER FRANCISCO GUTIERREZ CAMACHO COMO DEFENSOR DEL PUEBLO"
+  },
+  "008": {
+    "tipo": "VOTACIÓN",
+    "fecha": "09/06/2011",
+    "hora": "01:31 PM",
+    "asunto": "RECONSIDERACIÓN A LA VOTACIÓN DE LA ELECCIÓN DEL DEFENSOR DEL PUEBLO"
+  },
+  "010": {
+    "tipo": "VOTACIÓN",
+    "fecha": "09/06/2011",
+    "hora": "10:17 PM",
+    "asunto": "INFORME FINAL EN MAYORÍA DE LA COMISIÓN INVESTIGADORA SOBRE LOS HECHOS ACONTECIDOS EN LA CIUDAD DE BAGUA, ALEDANOS Y OTROS, DETERMINANDO RESPONSABILIDAD A QUE HAYA LUGAR"
+  }
+}

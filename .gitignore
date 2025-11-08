@@ -12,8 +12,25 @@ dist
 dist-ssr
 *.local
 
+# Env
+.env
+
+# Scraping data
+notebooks/scraping/data/classification
+notebooks/scraping/data/images
+notebooks/scraping/data/pdfs
+notebooks/scraping/data/zones
+
+# Python
+venv_*/
+**/venv_*/
+__pycache__/
+**/__pycache__/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
 # Editor directories and files
-.vscode/*
+#.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store

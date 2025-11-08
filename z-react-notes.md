@@ -19,3 +19,7 @@ Importante: Este proyecto usa node22.12.0
 npm create vite@latest
 npm install
 npm run dev
+
+# PdfToImage
+
+sudo apt update && sudo apt install poppler-utils -y

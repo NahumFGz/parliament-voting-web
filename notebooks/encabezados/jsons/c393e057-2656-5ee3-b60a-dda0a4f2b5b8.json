@@ -1,0 +1,20 @@
+{
+  "003": {
+    "tipo": "VOTACIÓN",
+    "fecha": "29/11/2013",
+    "hora": "03:14 AM",
+    "asunto": "PROY. 2595: LEY DE ENDEUDAMIENTO DEL SECTOR PUBLICO PARA EL AÑO FISCAL 2014"
+  },
+  "004": {
+    "tipo": "VOTACIÓN",
+    "fecha": "29/11/2013",
+    "hora": "03:17 AM",
+    "asunto": "PROY. 2596; LEY DE EQUILIBRIO FINANCIERO DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2014"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "29/11/2013",
+    "hora": "03:23 AM",
+    "asunto": "PROY. 2594; LEY DE PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2014"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "003": {
+    "tipo": "VOTACION",
+    "fecha": "21/11/2012",
+    "hora": "05:31 PM",
+    "asunto": "RESOLUCIÓN LEGISLATIVA 1731; QUE AUTORIZA AL SEÑOR PRESIDENTE DE LA REPÚBLICA PARA SALIR DEL TERRITORIO NACIONAL EL 23 DE NOVIEMBRE DE 2012"
+  },
+  "005": {
+    "tipo": "VOTACIÓN",
+    "fecha": "22/11/2012",
+    "hora": "01:11 AM",
+    "asunto": "PROYS. 856, 1118, 1134, 1160, 1300, 1388, 1440, 1469 Y 1504; LEY DE REFORMA MAGISTERIAL"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "22/11/2012",
+    "hora": "01:14 AM",
+    "asunto": "EXONERACIÓN DE LA SEGUNDA VOTACIÓN DE LOS PROYS. 856, 1118, 1134, 1160, 1300, 1388, 1440, 1469 Y 1504; LEY DE REFORMA MAGISTERIAL"
+  }
+}

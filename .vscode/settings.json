@@ -1,0 +1,13 @@
+{
+  "search.exclude": {
+    "venv_*/**": true,
+    "data/raw/pdf/**": true,
+    "data/raw/pdfs/**": true,
+  },
+  "files.watcherExclude": {
+    "venv_*/**": true,
+    "data/raw/pdf/**": true,
+    "data/raw/pdfs/**": true,
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv_test/bin/python"
+}

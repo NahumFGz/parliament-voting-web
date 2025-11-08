@@ -1,0 +1,50 @@
+{
+  "003": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/09/2019",
+    "hora": "11:34 AM",
+    "asunto": "MOCIÓN 10648 (ADMISIÓN); CENSURA A LA MESA DIRECTIVA DEL CONGRESO DE LA REPÚBLICA"
+  },
+  "005": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/09/2019",
+    "hora": "01:28 PM",
+    "asunto": "CUESTIÓN PREVIA PARA QUE SE SUSPENDA EL PROCESO DE ELECCIÓN DE MAGISTRADOS DEL TRIBUNAL CONSTITUCIONAL"
+  },
+  "006": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/09/2019",
+    "hora": "01:33 PM",
+    "asunto": "ELECCIÓN DEL CANDIDATO GONZALO ORTIZ DE ZEVALLOS OLAECHEA COMO MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL"
+  },
+  "007": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/09/2019",
+    "hora": "01:40 PM",
+    "asunto": "ELECCIÓN DEL CANDIDATO MANUEL SÁNCHEZ PALACIOS PAIVA COMO MAGISTRADO DEL TRIBUNAL CONSTITUCIONAL"
+  },
+  "009": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/09/2019",
+    "hora": "05:38 PM",
+    "asunto": "CUESTIÓN DE CONFIANZA PRESENTADA POR EL PRESIDENTE DEL CONSEJO DE MINISTROS"
+  },
+  "012": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/09/2019",
+    "hora": "08:12 PM",
+    "asunto": "MOCIÓN 10650 (ADMISIÓN); PROPONE LA VACANCIA DEL SEÑOR PRESIDENTE DE LA REPÚBLICA, DESCONOCIDO"
+  },
+  "014": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/09/2019",
+    "hora": "08:41 PM",
+    "asunto": "MOCIÓN 10651 (ADMISIÓN); PROPONE DECLARAR LA INCAPACIDAD TEMPORAL DEL PRESIDENTE DE LA REPÚBLICA MARTÍN ALBERTO VIZCARRA CORNEJO"
+  },
+  "015": {
+    "tipo": "VOTACIÓN",
+    "fecha": "30/09/2019",
+    "hora": "08:43 PM",
+    "asunto": "MOCIÓN 10651; PROPONE DECLARAR LA INCAPACIDAD TEMPORAL DEL PRESIDENTE DE LA REPÚBLICA MARTÍN ALBERTO VIZCARRA CORNEJO"
+  }
+}

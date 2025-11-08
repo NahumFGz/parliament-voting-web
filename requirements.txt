@@ -1,0 +1,17 @@
+jupyter
+requests
+pandas
+numpy
+openpyxl
+pillow
+matplotlib
+python-dotenv
+scikit-learn
+openai
+seaborn
+pdf2image
+beautifulsoup4
+torch
+torchvision
+opencv-python
+ultralytics
