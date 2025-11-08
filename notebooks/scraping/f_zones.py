@@ -102,7 +102,7 @@ def procesar_imagen(args):
             zona = image_bgr[y_min:y_max, x_min:x_max]
 
             # Guardar recorte
-            zona_filename = f"{base_name}{label_lower}{i+1}.jpg"
+            zona_filename = f"{base_name}{label_lower}{i+1}_.jpg"
             zona_path = os.path.join(output_dir, zona_filename)
 
             cv2.imwrite(zona_path, zona)
