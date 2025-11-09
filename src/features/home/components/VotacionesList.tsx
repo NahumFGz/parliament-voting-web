@@ -45,7 +45,7 @@ export function VotacionesList({
             <div className='flex justify-between items-start mb-2.5'>
               <div className='flex-1'>
                 <div className='text-sm text-gray-600 mb-2'>📅 {formatDate(item.fecha_hora)}</div>
-                <p className='m-0 leading-relaxed'>{item.asunto}</p>
+                <p className='m-0 leading-relaxed text-sm text-gray-800'>{item.asunto}</p>
               </div>
             </div>
             <div className='flex justify-between items-center mt-2.5 pt-2.5 border-t border-gray-200'>
