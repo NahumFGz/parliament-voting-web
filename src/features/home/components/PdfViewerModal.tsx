@@ -26,6 +26,8 @@ export function PdfViewerModal({ selectedPdf, onClose }: PdfViewerModalProps) {
     }
   }, [selectedPdf, onClose])
 
+  const isMobile = typeof navigator !== 'undefined' && /Mobi|Android/i.test(navigator.userAgent)
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleString('es-PE', {
@@ -66,11 +68,29 @@ export function PdfViewerModal({ selectedPdf, onClose }: PdfViewerModalProps) {
 
         {/* Visor de PDF */}
         <div className='flex-1 overflow-hidden relative bg-gray-100'>
-          <iframe
-            src={selectedPdf.url}
-            className='w-full h-full border-none'
-            title='Visor de PDF'
-          />
+          {isMobile ? (
+            <div className='h-full w-full flex flex-col items-center justify-center gap-4 p-6 text-center text-gray-700'>
+              <p className='text-sm'>
+                Esta votación está en la{' '}
+                <span className='font-bold'>página {selectedPdf.pagina}</span> del documento
+                oficial. Si prefieres un acceso más rápido, ábrelo desde un computador.
+              </p>
+              <a
+                href={selectedPdf.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='px-4 py-2 text-sm font-semibold bg-blue-500 text-white no-underline rounded hover:bg-blue-600 transition-colors inline-flex items-center gap-2'
+              >
+                Abrir en la web oficial
+              </a>
+            </div>
+          ) : (
+            <iframe
+              src={selectedPdf.url}
+              className='w-full h-full border-none'
+              title='Visor de PDF'
+            />
+          )}
         </div>
 
         {/* Footer del modal */}
