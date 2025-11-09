@@ -1,8 +1,10 @@
+import { Navigation } from './routers/Navigation'
+
 function App() {
   return (
-    <>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
-    </>
+    <div className='h-dvh w-full'>
+      <Navigation />
+    </div>
   )
 }
 
