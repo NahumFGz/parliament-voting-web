@@ -49,7 +49,7 @@ export function PdfViewerModal({ selectedPdf, onClose }: PdfViewerModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header del modal */}
-        <div className='flex justify-between items-start p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white'>
+        <div className='flex justify-between items-start p-4 border-b border-gray-200 bg-linear-to-r from-blue-50 to-white'>
           <div className='flex-1 pr-4'>
             <h3 className='text-lg font-bold mb-2 text-gray-800'>Documento de Votación</h3>
             <p className='text-sm text-gray-600 mb-1'>📅 {formatDate(selectedPdf.fecha_hora)}</p>
@@ -97,7 +97,7 @@ export function PdfViewerModal({ selectedPdf, onClose }: PdfViewerModalProps) {
                   d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
                 />
               </svg>
-              Ver documento oficial
+              Ver en web oficial
             </a>
           </div>
         </div>
@@ -105,4 +105,3 @@ export function PdfViewerModal({ selectedPdf, onClose }: PdfViewerModalProps) {
     </div>
   )
 }
-

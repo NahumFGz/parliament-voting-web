@@ -89,4 +89,3 @@ export function SearchFilters({
     </div>
   )
 }
-

@@ -16,6 +16,17 @@ interface SearchParams {
 let votacionesData: VotacionItem[] = []
 let dataLoaded = false
 
+// Normalizar texto para búsqueda: sin tildes, minúsculas, sin puntuación
+function normalizeText(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD') // Descompone caracteres con acentos
+    .replace(/[\u0300-\u036f]/g, '') // Elimina los diacríticos (tildes)
+    .replace(/[^\w\s]/g, '') // Elimina puntuación
+    .replace(/\s+/g, ' ') // Normaliza espacios múltiples a uno solo
+    .trim()
+}
+
 // Cargar datos al iniciar el worker
 async function loadData() {
   if (dataLoaded) return
@@ -44,10 +55,13 @@ function search(params: SearchParams): VotacionItem[] {
 
   let results = [...votacionesData]
 
-  // Filtrar por asunto
+  // Filtrar por asunto (búsqueda flexible sin tildes ni puntuación)
   if (params.asunto && params.asunto.trim() !== '') {
-    const asuntoLower = params.asunto.toLowerCase().trim()
-    results = results.filter((item) => item.asunto.toLowerCase().includes(asuntoLower))
+    const normalizedSearch = normalizeText(params.asunto)
+    results = results.filter((item) => {
+      const normalizedAsunto = normalizeText(item.asunto)
+      return normalizedAsunto.includes(normalizedSearch)
+    })
   }
 
   // Filtrar por fecha desde

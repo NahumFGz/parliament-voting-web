@@ -30,7 +30,7 @@ export function HomePage() {
 
   if (error) {
     return (
-      <div className='p-5 max-w-7xl mx-auto'>
+      <div className='py-5'>
         <div className='p-5 bg-red-50 border border-red-200 rounded-lg'>
           <h2>Error al cargar datos</h2>
           <p>{error}</p>
@@ -40,9 +40,7 @@ export function HomePage() {
   }
 
   return (
-    <div className='p-5 max-w-7xl mx-auto'>
-      <h1 className='mb-5 text-3xl font-bold'>Buscador de Votaciones del Congreso</h1>
-
+    <div className='py-5'>
       {isLoading ? (
         <div className='py-10 text-center bg-gray-100 rounded-lg'>
           <p className='text-lg'>Cargando datos...</p>

@@ -54,7 +54,7 @@ export function VotacionesList({
                 onClick={() => onViewPdf(item)}
                 className='px-3 py-1.5 bg-green-500 text-white no-underline rounded text-sm font-bold hover:bg-green-600 transition-colors cursor-pointer border-none'
               >
-                Ver PDF
+                Ver Votaciones
               </button>
             </div>
           </div>
@@ -74,4 +74,3 @@ export function VotacionesList({
     </div>
   )
 }
-
