@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { HomeLayout } from '../features/home/layouts/HomeLayout'
 import { HomePage } from '../features/home/pages/HomePage'
 import { ErrorLayout } from '../features/error/layouts/ErrorLayout'
@@ -9,8 +9,7 @@ export function Navigation() {
     <BrowserRouter>
       <Routes>
         <Route element={<HomeLayout />}>
-          <Route index element={<Navigate to='/home' replace />} />
-          <Route path='/home' element={<HomePage />} />
+          <Route path='/' element={<HomePage />} />
         </Route>
 
         {/* Rutas para error */}
