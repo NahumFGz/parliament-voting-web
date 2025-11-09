@@ -9,8 +9,8 @@ from typing import Any, Iterable
 
 JSONS_DIR = Path("./jsons")
 DOCUMENTS_HISTORICOS_CSV_PATH = Path("../scraping/data/documentos_historico.csv")
-OUTPUT_PATH = Path("./db/encabezados_unificados.json")
-ERRORES_PATH = Path("./db/errores.csv")
+OUTPUT_PATH = Path("../../public/db/encabezados_unificados.json")
+ERRORES_PATH = Path("./errores.csv")
 
 
 def _orden_pagina(pagina: str) -> tuple[int, str]:
@@ -207,6 +207,7 @@ def construir_registros(
                     "tipo": pagina_data.get("tipo"),
                     "fecha_hora": fecha_hora,
                     "asunto": pagina_data.get("asunto"),
+                    "pagina": pagina_normalizada,
                     "url": url_pag,
                 }
             )
