@@ -1,29 +1,59 @@
 import { useState, useCallback, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { useSearchWorker, type VotacionItem } from '../../../workers/useSearchWorker'
 
 export function useVotacionesSearch() {
   const { search, isLoading, dataCount, error } = useSearchWorker()
-  
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  // Leer valores iniciales desde los query params
+  const initialAsunto = searchParams.get('asunto') || ''
+  const initialFechaDesde = searchParams.get('fechaDesde') || ''
+  const initialFechaHasta = searchParams.get('fechaHasta') || ''
+
   // Estados de filtros
-  const [asunto, setAsunto] = useState('')
-  const [fechaDesde, setFechaDesde] = useState('')
-  const [fechaHasta, setFechaHasta] = useState('')
-  
+  const [asunto, setAsunto] = useState(initialAsunto)
+  const [fechaDesde, setFechaDesde] = useState(initialFechaDesde)
+  const [fechaHasta, setFechaHasta] = useState(initialFechaHasta)
+
   // Estados de resultados
   const [results, setResults] = useState<VotacionItem[]>([])
   const [isSearching, setIsSearching] = useState(false)
   const [hasSearched, setHasSearched] = useState(false)
   const [displayLimit, setDisplayLimit] = useState(50)
   const [latestDate, setLatestDate] = useState<string>('')
+  const [isInitialized, setIsInitialized] = useState(false)
+
+  // Sincronizar query params con los filtros
+  useEffect(() => {
+    const params = new URLSearchParams()
+
+    if (asunto) params.set('asunto', asunto)
+    if (fechaDesde) params.set('fechaDesde', fechaDesde)
+    if (fechaHasta) params.set('fechaHasta', fechaHasta)
+
+    setSearchParams(params, { replace: true })
+  }, [asunto, fechaDesde, fechaHasta, setSearchParams])
 
   // Cargar resultados iniciales cuando termine de cargar
   useEffect(() => {
-    if (!isLoading && !hasSearched) {
+    if (!isLoading && !hasSearched && !isInitialized) {
       const loadInitialResults = async () => {
         setIsSearching(true)
         setHasSearched(true)
+        setIsInitialized(true)
         try {
-          const searchResults = await search({})
+          // Si hay filtros en la URL, buscar con esos filtros
+          const hasUrlFilters = initialAsunto || initialFechaDesde || initialFechaHasta
+          const searchResults = await search(
+            hasUrlFilters
+              ? {
+                  asunto: initialAsunto,
+                  fechaDesde: initialFechaDesde || undefined,
+                  fechaHasta: initialFechaHasta || undefined
+                }
+              : {}
+          )
           setResults(searchResults)
           if (searchResults.length > 0) {
             setLatestDate(searchResults[0].fecha_hora)
@@ -36,7 +66,15 @@ export function useVotacionesSearch() {
       }
       loadInitialResults()
     }
-  }, [isLoading, hasSearched, search])
+  }, [
+    isLoading,
+    hasSearched,
+    search,
+    isInitialized,
+    initialAsunto,
+    initialFechaDesde,
+    initialFechaHasta
+  ])
 
   // Realizar búsqueda con filtros
   const handleSearch = useCallback(async () => {
@@ -66,7 +104,8 @@ export function useVotacionesSearch() {
     setResults([])
     setHasSearched(false)
     setDisplayLimit(50)
-  }, [])
+    setSearchParams({}, { replace: true })
+  }, [setSearchParams])
 
   // Cargar más resultados
   const loadMore = useCallback(() => {
@@ -83,23 +122,22 @@ export function useVotacionesSearch() {
     hasSearched,
     displayLimit,
     latestDate,
-    
+
     // Estados de filtros
     filters: {
       asunto,
       fechaDesde,
       fechaHasta
     },
-    
+
     // Setters de filtros
     setAsunto,
     setFechaDesde,
     setFechaHasta,
-    
+
     // Acciones
     handleSearch,
     clearFilters,
     loadMore
   }
 }
-
