@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Orejas (más pegadas al borde superior) -->
+  <circle cx="75" cy="75" r="45" fill="#F7C6D0" stroke="#D35C7A" stroke-width="8"/>
+  <circle cx="185" cy="75" r="45" fill="#F7C6D0" stroke="#D35C7A" stroke-width="8"/>
+
+  <!-- Cabeza más grande y centrada -->
+  <ellipse cx="130" cy="150" rx="85" ry="65" fill="#CFCFD6" stroke="#787A84" stroke-width="8"/>
+
+  <!-- Ojos -->
+  <circle cx="110" cy="145" r="10" fill="#3B3B3B"/>
+  <circle cx="150" cy="145" r="10" fill="#3B3B3B"/>
+
+  <!-- Nariz -->
+  <circle cx="130" cy="170" r="10" fill="#D35C7A"/>
+
+
+</svg>

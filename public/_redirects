@@ -1,0 +1,4 @@
+# Cloudflare Pages - SPA Routing
+# Todas las rutas que no sean archivos deben servir index.html
+/*    /index.html    200
+
