@@ -64,6 +64,7 @@ export function HomePage() {
             fechaHasta={filters.fechaHasta}
             isLoading={isLoading}
             isSearching={isSearching}
+            hasActiveFilters={hasFilters}
             onAsuntoChange={setAsunto}
             onFechaDesdeChange={setFechaDesde}
             onFechaHastaChange={setFechaHasta}

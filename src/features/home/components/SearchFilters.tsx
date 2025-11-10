@@ -4,6 +4,7 @@ interface SearchFiltersProps {
   fechaHasta: string
   isLoading: boolean
   isSearching: boolean
+  hasActiveFilters: boolean
   onAsuntoChange: (value: string) => void
   onFechaDesdeChange: (value: string) => void
   onFechaHastaChange: (value: string) => void
@@ -17,6 +18,7 @@ export function SearchFilters({
   fechaHasta,
   isLoading,
   isSearching,
+  hasActiveFilters,
   onAsuntoChange,
   onFechaDesdeChange,
   onFechaHastaChange,
@@ -81,7 +83,8 @@ export function SearchFilters({
 
         <button
           onClick={onClear}
-          className='px-5 py-2.5 text-base bg-gray-100 text-gray-800 border border-gray-300 rounded cursor-pointer hover:bg-gray-200 transition-colors'
+          disabled={!hasActiveFilters}
+          className='px-5 py-2.5 text-base bg-gray-100 text-gray-800 border border-gray-300 rounded cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 hover:bg-gray-200 transition-colors'
         >
           Limpiar Filtros
         </button>
