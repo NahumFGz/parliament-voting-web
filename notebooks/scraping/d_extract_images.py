@@ -2,8 +2,10 @@ import os
 import shutil
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
+import pandas as pd
 from pdf2image import convert_from_path
 
+SCRAPER_PDF_FILES = "./data/documentos_scraper.csv"
 PDFS_FOLDER = "./data/pdfs"
 IMAGES_FOLDER = "./data/images"
 
@@ -16,6 +18,22 @@ CONVERT_TO_GRAYSCALE = True  # 🔧 True para convertir a escala de grises, Fals
 if os.path.isdir(IMAGES_FOLDER):
     shutil.rmtree(IMAGES_FOLDER)
 os.makedirs(IMAGES_FOLDER, exist_ok=True)
+
+
+def _load_allowed_pdfs():
+    """Carga los nombres de los PDFs listados en SCRAPER_PDF_FILES."""
+    if not os.path.isfile(SCRAPER_PDF_FILES):
+        print(f"⚠️ El archivo de datos no existe: {SCRAPER_PDF_FILES}")
+        return set()
+
+    try:
+        df = pd.read_csv(SCRAPER_PDF_FILES, usecols=["file_name"], dtype=str)
+    except Exception as exc:
+        print(f"⚠️ Error leyendo {SCRAPER_PDF_FILES}: {exc}")
+        return set()
+
+    file_names = df["file_name"].dropna().astype(str).str.strip()
+    return {name for name in file_names if name}
 
 
 def process_pdf(file: str):
@@ -44,10 +62,11 @@ def process_pdf(file: str):
 
 
 # Lista de PDFs
-pdf_files = [f for f in os.listdir(PDFS_FOLDER) if f.endswith(".pdf")]
+allowed_pdfs = _load_allowed_pdfs()
+pdf_files = [f for f in os.listdir(PDFS_FOLDER) if f.endswith(".pdf") and f in allowed_pdfs]
 total_pdfs = len(pdf_files)
 
-print(f"📄 Se encontraron {total_pdfs} archivos PDF para procesar.")
+print(f"📄 Se encontraron {total_pdfs} archivos PDF en datos y disponibles para procesar.")
 print(f"🚀 Procesando en paralelo con {NUM_WORKERS} workers...\n")
 
 # Ejecutar en paralelo
