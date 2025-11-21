@@ -16,6 +16,14 @@ REQUEST_TIMEOUT = 200  # segundos máximos esperando respuesta del servidor por 
 MAX_RETRIES = 5  # número de reintentos por archivo
 RETRY_DELAY = 60  # segundos de espera entre reintentos
 
+# Cabeceras que simulan un navegador para evitar bloqueos
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+    "Referer": "https://www2.congreso.gob.pe/",
+}
+
 # 📂 Archivos de entrada
 DATA_FILE = "./data/documentos_scraper.csv"
 DOWNLOAD_DIR = "./data/pdfs"
@@ -52,7 +60,12 @@ def download_file(index, row):
     last_error = None
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            response = requests.get(url, verify=False, timeout=REQUEST_TIMEOUT)
+            response = requests.get(
+                url,
+                verify=False,
+                timeout=REQUEST_TIMEOUT,
+                headers=HEADERS,
+            )
             if response.status_code == 200:
                 with open(file_path, "wb") as f:
                     f.write(response.content)
