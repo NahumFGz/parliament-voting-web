@@ -1,4 +1,4 @@
-# Instalaciones básicas
+# Instalaciones iniciales
 
 Importante: Este proyecto usa node22.12.0
 
