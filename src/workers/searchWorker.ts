@@ -1,8 +1,8 @@
 interface VotacionItem {
   id: string
-  tipo: string
-  fecha_hora: string
-  asunto: string
+  tipo: string | null
+  fecha_hora: string | null
+  asunto: string | null
   pagina: string
   url: string
 }
@@ -17,7 +17,8 @@ let votacionesData: VotacionItem[] = []
 let dataLoaded = false
 
 // Normalizar texto para búsqueda: sin tildes, minúsculas, sin puntuación
-function normalizeText(text: string): string {
+function normalizeText(text: string | null): string {
+  if (!text) return ''
   return text
     .toLowerCase()
     .normalize('NFD') // Descompone caracteres con acentos
@@ -68,8 +69,9 @@ function search(params: SearchParams): VotacionItem[] {
   if (params.fechaDesde) {
     const fechaDesde = new Date(params.fechaDesde)
     results = results.filter((item) => {
+      if (!item.fecha_hora) return false
       const itemFecha = new Date(item.fecha_hora)
-      return itemFecha >= fechaDesde
+      return !isNaN(itemFecha.getTime()) && itemFecha >= fechaDesde
     })
   }
 
@@ -79,14 +81,28 @@ function search(params: SearchParams): VotacionItem[] {
     // Agregar 23:59:59 al día seleccionado
     fechaHasta.setHours(23, 59, 59, 999)
     results = results.filter((item) => {
+      if (!item.fecha_hora) return false
       const itemFecha = new Date(item.fecha_hora)
-      return itemFecha <= fechaHasta
+      return !isNaN(itemFecha.getTime()) && itemFecha <= fechaHasta
     })
   }
 
   // Ordenar por fecha (más reciente primero)
+  // Los items sin fecha van al final
   results.sort((a, b) => {
-    return new Date(b.fecha_hora).getTime() - new Date(a.fecha_hora).getTime()
+    if (!a.fecha_hora && !b.fecha_hora) return 0
+    if (!a.fecha_hora) return 1
+    if (!b.fecha_hora) return -1
+    
+    const fechaA = new Date(a.fecha_hora)
+    const fechaB = new Date(b.fecha_hora)
+    
+    // Si alguna fecha es inválida, ponerla al final
+    if (isNaN(fechaA.getTime()) && isNaN(fechaB.getTime())) return 0
+    if (isNaN(fechaA.getTime())) return 1
+    if (isNaN(fechaB.getTime())) return -1
+    
+    return fechaB.getTime() - fechaA.getTime()
   })
 
   return results

@@ -2,9 +2,9 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 
 export interface VotacionItem {
   id: string
-  tipo: string
-  fecha_hora: string
-  asunto: string
+  tipo: string | null
+  fecha_hora: string | null
+  asunto: string | null
   pagina: string
   url: string
 }

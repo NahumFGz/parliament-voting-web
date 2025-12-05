@@ -28,8 +28,10 @@ export function PdfViewerModal({ selectedPdf, onClose }: PdfViewerModalProps) {
 
   const isMobile = typeof navigator !== 'undefined' && /Mobi|Android/i.test(navigator.userAgent)
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string | null) => {
+    if (!dateString) return 'Fecha no disponible'
     const date = new Date(dateString)
+    if (isNaN(date.getTime())) return 'Fecha inválida'
     return date.toLocaleString('es-PE', {
       year: 'numeric',
       month: '2-digit',
@@ -55,7 +57,7 @@ export function PdfViewerModal({ selectedPdf, onClose }: PdfViewerModalProps) {
           <div className='flex-1 pr-4'>
             <h3 className='text-lg font-bold mb-2 text-gray-800'>Documento de Votación</h3>
             <p className='text-sm text-gray-600 mb-1'>📅 {formatDate(selectedPdf.fecha_hora)}</p>
-            <p className='text-xs text-gray-500 line-clamp-2'>{selectedPdf.asunto}</p>
+            <p className='text-xs text-gray-500 line-clamp-2'>{selectedPdf.asunto || 'Asunto no disponible'}</p>
           </div>
           <button
             onClick={onClose}

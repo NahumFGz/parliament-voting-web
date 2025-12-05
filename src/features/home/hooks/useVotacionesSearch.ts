@@ -55,7 +55,7 @@ export function useVotacionesSearch() {
               : {}
           )
           setResults(searchResults)
-          if (searchResults.length > 0) {
+          if (searchResults.length > 0 && searchResults[0].fecha_hora) {
             setLatestDate(searchResults[0].fecha_hora)
           }
         } catch (err) {
