@@ -656,6 +656,14 @@
     "url": "https://www2.congreso.gob.pe/Sicr/RelatAgenda/PlenoComiPerm20112016.nsf/Apleno/0B508771922063BE05258D5100012FFB/$FILE/Asis_y_vot_del_28-11-2025.pdf#page=6"
   },
   {
+    "id": "5cf32dc4-deb9-5f71-b7a7-99e42bfbc636_page004",
+    "tipo": "VOTACIÓN",
+    "fecha_hora": "2025-11-28 19:00:00",
+    "asunto": "TEXTO SUSTITUTORIO DEL PROYECTO DE LEY 12256, QUE PROPONE LA LEY DE EQUILIBRIO FINANCIERO DEL PRESUPUESTO DEL SECTOR PÚBLICO PARA EL AÑO FISCAL 2026",
+    "pagina": "4",
+    "url": "https://www2.congreso.gob.pe/Sicr/RelatAgenda/PlenoComiPerm20112016.nsf/Apleno/0B508771922063BE05258D5100012FFB/$FILE/Asis_y_vot_del_28-11-2025.pdf#page=4"
+  },
+  {
     "id": "5cf32dc4-deb9-5f71-b7a7-99e42bfbc636_page003",
     "tipo": "VOTACIÓN",
     "fecha_hora": "2025-11-28 18:56:00",
@@ -73950,13 +73958,5 @@
     "asunto": "PROY 3947, MODIFICACION DE LA LEY GENERAL DEL SISTEMA NACIONAL DE CONTABILIDAD PARA ADECUARLA A LOS ARTICULOS 80° Y 81° DE LA CONSTITUCION POLITICA, RESPECTO DE LA CUENTA GENERAL DE LA REPUBLICA",
     "pagina": "3",
     "url": "https://www2.congreso.gob.pe/Sicr/RelatAgenda/PlenoComiPerm20112016.nsf/Apleno/F6784416179DEF5D052584B000589DA3/$FILE/Asis-vot-OFICIAL-02-06-2010-CF.pdf#page=3"
-  },
-  {
-    "id": "5cf32dc4-deb9-5f71-b7a7-99e42bfbc636_page004",
-    "tipo": null,
-    "fecha_hora": null,
-    "asunto": null,
-    "pagina": "4",
-    "url": "https://www2.congreso.gob.pe/Sicr/RelatAgenda/PlenoComiPerm20112016.nsf/Apleno/0B508771922063BE05258D5100012FFB/$FILE/Asis_y_vot_del_28-11-2025.pdf#page=4"
   }
 ]

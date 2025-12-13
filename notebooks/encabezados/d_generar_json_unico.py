@@ -151,6 +151,11 @@ def _combinar_fecha_hora(fecha: str | None, hora: str | None) -> str | None:
     return f"{fecha_norm} {hora_norm}"
 
 
+def _normalizar_claves_pagina(pagina_data: dict[str, Any]) -> dict[str, Any]:
+    """Normaliza las claves del diccionario de página a minúsculas."""
+    return {k.lower(): v for k, v in pagina_data.items()}
+
+
 def construir_registros(
     json_paths: Iterable[Path], urls_por_id: dict[str, str]
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -177,6 +182,9 @@ def construir_registros(
                     f"[ADVERTENCIA] La página '{pagina}' de '{json_path.name}' no es un objeto válido."
                 )
                 continue
+
+            # Normalizar claves a minúsculas para manejar inconsistencias
+            pagina_data = _normalizar_claves_pagina(pagina_data)
 
             pagina_normalizada = _normalizar_pagina(pagina)
             pagina_formateada = _formatear_pagina(pagina)
