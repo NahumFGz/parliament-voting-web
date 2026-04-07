@@ -21,7 +21,6 @@ export function useVotacionesSearch() {
   const [isSearching, setIsSearching] = useState(false)
   const [hasSearched, setHasSearched] = useState(false)
   const [displayLimit, setDisplayLimit] = useState(50)
-  const [latestDate, setLatestDate] = useState<string>('')
   const [isInitialized, setIsInitialized] = useState(false)
 
   // Sincronizar query params con los filtros
@@ -55,9 +54,6 @@ export function useVotacionesSearch() {
               : {}
           )
           setResults(searchResults)
-          if (searchResults.length > 0 && searchResults[0].fecha_hora) {
-            setLatestDate(searchResults[0].fecha_hora)
-          }
         } catch (err) {
           console.error('Error al cargar resultados iniciales:', err)
         } finally {
@@ -121,7 +117,6 @@ export function useVotacionesSearch() {
     isSearching,
     hasSearched,
     displayLimit,
-    latestDate,
 
     // Estados de filtros
     filters: {

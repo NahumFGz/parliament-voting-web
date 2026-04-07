@@ -1,5 +1,5 @@
 import { PdfViewerModal, SearchFilters, VotacionesList } from '../components'
-import { useVotacionesSearch, usePdfModal } from '../hooks'
+import { useEncabezadosFechas, useVotacionesSearch, usePdfModal } from '../hooks'
 import { formatDate } from '../utils/formatDate'
 
 export function HomePage() {
@@ -12,7 +12,6 @@ export function HomePage() {
     isSearching,
     hasSearched,
     displayLimit,
-    latestDate,
     filters,
     setAsunto,
     setFechaDesde,
@@ -21,6 +20,9 @@ export function HomePage() {
     clearFilters,
     loadMore
   } = useVotacionesSearch()
+
+  const { oldestDate, latestDate } = useEncabezadosFechas()
+  const hasDateRange = !!(oldestDate && latestDate)
 
   // Hook para manejar el modal de PDF
   const { selectedPdf, openModal, closeModal } = usePdfModal()
@@ -47,14 +49,21 @@ export function HomePage() {
         </div>
       ) : (
         <>
-          <div className='mb-5 p-4 bg-green-50 rounded-lg border border-green-500'>
-            <p className={`m-0 font-bold ${latestDate ? 'mb-2' : ''}`}>
+          <div className='mb-5 p-4 bg-green-50 rounded-lg border border-green-500 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4'>
+            <p className='m-0 font-bold min-w-0'>
               ✓ {dataCount.toLocaleString()} votaciones cargadas
             </p>
-            {latestDate && (
-              <p className='m-0 text-sm text-green-700'>
-                📅 Última votación registrada: {formatDate(latestDate)}
-              </p>
+            {hasDateRange && (
+              <div className='text-sm text-green-700 space-y-1 self-start sm:self-auto text-left sm:text-right shrink-0 sm:max-w-[min(100%,22rem)]'>
+                <p className='m-0 tabular-nums'>
+                  <span className='text-green-800/80'>Votación más reciente:</span>{' '}
+                  {formatDate(latestDate)}
+                </p>
+                <p className='m-0 tabular-nums'>
+                  <span className='text-green-800/80'>Votación más antigua:</span>{' '}
+                  {formatDate(oldestDate)}
+                </p>
+              </div>
             )}
           </div>
 
